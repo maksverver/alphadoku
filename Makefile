@@ -5,3 +5,8 @@ dlxc: dlxc.cpp
 
 dlxf: dlxf.f90
 	ifort -fast -o dlxf dlxf.f90
+
+clean:
+	rm -f dlxc dlxf
+
+.PHONY: all clean
