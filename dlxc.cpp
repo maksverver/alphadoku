@@ -1,5 +1,6 @@
 #include <cstdlib>
 #include <cstdio>
+#include <cstring>
 #include <iostream>
 
 class Sudoku
@@ -220,11 +221,14 @@ void Sudoku::clear()
 
 int main()
 {
+    // Dimension:
+    // 3 for standard 9x9 sudoku
+    // 5 for 25x25 alphadoku
     Sudoku sudoku(5);
 
     int count = 0;
     char str[8192];
-    while(fgets(str, sizeof(str), stdin) > 0)
+    while(fgets(str, sizeof(str), stdin))
     {
         if(int(strlen(str)) < sudoku.area)
         {
